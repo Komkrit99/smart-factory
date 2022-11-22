@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Smart Factory</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div class="navbar row">
+        <div>
+            <img src="img/Robot Studio-Logo-06.png" height="90px" alt="">
+        </div>
+        <div>
+            SMART FACTORY
+        </div>
+    </div>
+    <div style="margin-top: 20px;">
+        <img src="img/machine management.png" alt="">
+    </div>
+    <div class="row">
+        <div id="item-left">
+        <div  style="
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 989px;
+        top: 221px;
+        
+        background: #FF0000;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+
+        </div>
+        <div>
+            <input type="text" style="position: absolute;
+            width: 30px;
+            height: 41px;
+            left: 1064px;
+            top: 230px;
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            border: 0px;
+            color: #000000;" disabled value="0">
+        </div>
+        <div style="
+        position: absolute;
+width: 50px;
+height: 50px;
+left: 1114px;
+top: 221px;
+
+background: #04B4FF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+
+        </div>
+        <div>
+            <input type="text" style="position: absolute;
+            width: 30px;
+height: 41px;
+left: 1194px;
+top: 230px;
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            border: 0px;
+            color: #000000;" disabled value="0">
+        </div>
+        <div style="
+        position: absolute;
+width: 50px;
+height: 50px;
+left: 1245px;
+top: 221px;
+
+background: #04FF2C;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+
+        </div>
+        <div>
+            <input type="text" style="position: absolute;
+            width: 30px;
+            height: 41px;
+            left: 1323px;
+top: 230px;
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            border: 0px;
+            color: #000000;" disabled value="0">
+        </div>
+        <div style="
+        position: absolute;
+width: 50px;
+height: 50px;
+left: 1376px;
+top: 221px;
+
+background: #F2DA00;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+
+        </div>
+        <div>
+            <input type="text" style="position: absolute;
+            width: 30px;
+            height: 41px;
+            left: 1446px;
+top: 230px;
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            border: 0px;
+            color: #000000;" disabled value="0">
+        </div>
+        <div style="
+        position: absolute;
+width: 50px;
+height: 50px;
+left: 1507px;
+top: 221px;
+
+background: #D90AFB;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+
+        </div>
+        <div>
+            <input type="text" style="position: absolute;
+            width: 30px;
+            height: 41px;
+            left: 1577px;
+top: 230px;
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            border: 0px;
+            color: #000000;" disabled value="0">
+        </div>
+        <div onclick=addOpen()  style="position: absolute;
+        width: 100px;
+        height: 86px;
+        left: 1695px;
+        top: 203px;
+        border: 15px;
+        background: #D9D9D9;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        ">
+
+        </div>
+        <div style="position: absolute;
+            width: 72px;
+            height: 40px;
+            left: 1709px;
+            top: 230px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #000000;">Add
+            </div>
+        </div>
+        <div id="station">
+        <div style="position: absolute;
+        width: 1602px;
+        height: 572px;
+        left: 159px;
+        top: 301px;
+        
+        background: #D9D9D9;
+        border-radius: 15px;">
+
+        </div>
+        <div style="position: absolute;
+        width: 1602px;
+        height: 154px;
+        left: 159px;
+        top: 519px;
+        
+        background: #0C5800;">
+
+        </div>
+        <div style="position: absolute;
+        width: 168px;
+        height: 46px;
+        left: 191px;
+        top: 323px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #000000;">
+            Color Sensor
+        </div>
+        <div id="colorsensor" style="box-sizing: border-box;
+
+        position: absolute;
+        width: 75px;
+        height: 75px;
+        left: 234px;
+        top: 383px;
+        
+        background: #FF0000;
+        border: 1px solid #000000;
+        border-radius: 30px;"></div>
+        </div>
+        <div id="pusher">
+        <div onclick=pickpussher(1) style="position: absolute;
+        width: 65px;
+        height: 108px;
+        left: 498px;
+        top: 403px;
+        
+        background: #3A55E2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+        <div onclick=pickpussher(3) style="position: absolute;
+        width: 65px;
+        height: 108px;
+        left: 694px;
+top: 403px;
+        
+        background: #3A55E2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+        <div onclick=pickpussher(5) style="position: absolute;
+        width: 65px;
+        height: 108px;
+        left: 918px;
+top: 403px;
+        
+        background: #3A55E2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+        <div onclick=pickpussher(7) style="position: absolute;
+        width: 65px;
+        left: 1142px;
+top: 403px;height: 108px;
+
+        
+        background: #3A55E2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+        <div onclick=pickpussher(9) style="position: absolute;
+        width: 65px;
+        height: 108px;
+        left: 1338px;
+top: 403px;
+        
+        background: #3A55E2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+        <div onclick=pickpussher(0) style="position: absolute;
+        width: 65px;
+        height: 108px;
+        left: 377px;
+top: 683px;
+        
+        background: #3A55E2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+        <div onclick=pickpussher(2) style="position: absolute;
+        width: 65px;
+        height: 108px;
+        left: 601px;
+top: 683px;
+        
+        background: #3A55E2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+        <div onclick=pickpussher(4) style="position: absolute;
+        width: 65px;
+        height: 108px;
+        left: 815px;
+top: 683px;
+        
+        background: #3A55E2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+        <div onclick=pickpussher(6) style="position: absolute;
+        width: 65px;
+        height: 108px;
+        left: 1029px;
+top: 683px;
+        
+        background: #3A55E2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+        <div onclick=pickpussher(8) style="position: absolute;
+        width: 65px;
+        height: 108px;
+        left: 1253px;
+top: 683px;
+        
+        background: #3A55E2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+        <div style="position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 518px;
+        top: 445px;
+        border-radius: 50%;
+        background: #FF0000;">
+        </div>
+        <div style="position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 714px;
+top: 445px;
+        border-radius: 50%;
+        background: #FF0000;">
+        </div>
+        <div style="position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 938px;
+top: 445px;
+        border-radius: 50%;
+        background: #FF0000;">
+        </div>
+        <div style="position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 1162px;
+top: 445px;
+        border-radius: 50%;
+        background: #FF0000;">
+        </div>
+        <div style="position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 1358px;
+top: 445px;
+        border-radius: 50%;
+        background: #FF0000;">
+        </div>
+        <div style="position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 397px;
+top: 714px;
+        border-radius: 50%;
+        background: #FF0000;">
+        </div>
+        <div style="position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 621px;
+top: 714px;
+        border-radius: 50%;
+        background: #FF0000;">
+        </div>
+        <div style="position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 835px;
+top: 714px;
+
+        border-radius: 50%;
+        background: #FF0000;">
+        </div>
+        <div style="position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 1049px;
+top: 714px;
+        border-radius: 50%;
+        background: #FF0000;">
+        </div>
+        <div style="position: absolute;
+        width: 25px;
+        height: 25px;
+        left: 1273px;
+top: 714px;
+        border-radius: 50%;
+        background: #FF0000;">
+        </div>
+        <div style="margin-left: 45px; position: absolute;
+        width: 168px;
+        height: 46px;
+        left: 446px;
+        top: 351px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #000000;">
+        Pusher 1
+        </div>
+        <div style="margin-left: 45px; position: absolute;
+        width: 168px;
+        height: 46px;
+        left: 646px;
+top: 351px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #000000;">
+        Pusher 3
+        </div>
+        <div style="margin-left: 45px; position: absolute;
+        width: 168px;
+        height: 46px;
+        left: 861px;
+top: 357px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #000000;">
+        Pusher 5
+        </div>
+        <div style="margin-left: 45px; position: absolute;
+        width: 168px;
+        height: 46px;
+        left: 1094px;
+top: 360px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #000000;">
+        Pusher 7
+        </div>
+        <div style="margin-left: 45px; position: absolute;
+        width: 168px;
+        height: 46px;
+        left: 1284px;
+top: 355px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #000000;">
+        Pusher 9
+        </div>
+        <div style="margin-left: 45px; position: absolute;
+        width: 168px;
+        height: 46px;
+        left: 330px;
+top: 791px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #000000;">
+        Pusher 0
+        </div>
+        <div style="margin-left: 45px; position: absolute;
+        width: 168px;
+        height: 46px;
+        left: 549px;
+top: 791px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #000000;">
+        Pusher 2
+        </div>
+        <div style="margin-left: 45px; position: absolute;
+        width: 168px;
+        height: 46px;
+        left: 768px;
+top: 791px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #000000;">
+        Pusher 4
+        </div>
+        <div style="margin-left: 45px; position: absolute;
+        width: 168px;
+        height: 46px;
+        left: 987px;
+top: 791px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #000000;">
+        Pusher 6
+        </div>
+        <div style="margin-left: 45px; position: absolute;
+        width: 168px;
+        height: 46px;
+        left: 1202px;
+top: 791px;
+
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #000000;">
+        Pusher 8
+        </div>
+    </div>
+        <div id = 'add_item' style="display: none;">
+        <div  style="position: absolute;
+        width: 457px;
+        height: 554px;
+        left: 698px;
+        top: 301px;
+        
+        background: #737373;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;"></div>
+        <div style="position: absolute;
+        width: 161px;
+        height: 55px;
+        left: 720px;
+        top: 323px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #040404;">Add Item</div>
+        <div onclick=addClose() style="
+        position: absolute;
+width: 65px;
+height: 65px;
+left: 1057px;
+top: 322px;
+border-radius: 50%;
+
+background: #FE6E6E;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+        <div style="position: absolute;
+        width: 35px;
+        height: 30px;
+        left: 1074px;
+        top: 340px;
+        margin-left: 5px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #ffffff;">
+            X
+        </div>
+        <div style="position: absolute;
+        width: 60px;
+        height: 60px;
+        left: 755px;
+        top: 413px;
+        
+        background: #FF0000;"></div>
+        <input type="text" style="position: absolute;
+        width: 230px;
+        height: 60px;
+        left: 832px;
+        top: 413px;
+        border: 0 ;
+        background: #D9D9D9;">
+        <div style="
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        left: 755px;
+        top: 489px;
+        
+        background: #00A3FF;"></div>
+        <input type="text" style="position: absolute;
+        width: 230px;
+        height: 60px;
+        left: 832px;
+top: 489px;
+        border: 0 ;
+        background: #D9D9D9;">
+        <div style="
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        left: 755px;
+        top: 566px;
+
+background: #09D71E;"></div>
+        <input type="text" style="position: absolute;
+        width: 230px;
+        height: 60px;
+        left: 832px;
+        top: 567px;
+        border: 0 ;
+        background: #D9D9D9;">
+        <div style="
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        left: 755px;
+        top: 643px;
+
+background: #F2DA00;"></div>
+        <input type="text" style="position: absolute;
+        width: 230px;
+        height: 60px;
+        left: 832px;
+        top: 643px;
+        border: 0 ;
+        background: #D9D9D9;">
+        <div style="
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        left: 755px;
+        top: 717px;
+
+background: #D90AFB;"></div>
+        <input type="text" style="position: absolute;
+        width: 230px;
+        height: 60px;
+        left: 832px;
+        top: 717px;
+        border: 0 ;
+        background: #D9D9D9;">
+        <div id="add" style="position: absolute;
+        width: 115px;
+        height: 54px;
+        left: 999px;
+        top: 793px;
+        
+        background: #7EE996;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;">
+            
+        </div>
+        <div style="position: absolute;
+            width: 154px;
+            height: 52px;
+            left: 980px;
+            top: 793px;
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-left:50px ;
+            color: #000000;" >Add</div>
+            </div>
+        <div id="change-color" style="display: none;">
+            <div style="position: absolute;
+            width: 432px;
+            height: 132px;
+            left: 729px;
+            top: 530px;
+            
+            background: #D9D9D9;
+            border-radius: 15px;"></div>
+            <div style="position: absolute;
+            width: 168px;
+            height: 46px;
+            left: 741px;
+            top: 536px;
+            
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            
+            color: #000000;"> Changer Color</div>
+            <div style="position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 745px;
+            top: 591px;
+            
+            background: #FF0000;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+            <div style="position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 816px;
+            top: 591px;
+            
+            background: #04B4FF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+            <div style="position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 887px;
+            top: 591px;
+            
+            background: #04FF2C;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+            <div style="
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 958px;
+            top: 591px;
+            
+            background: #F2DA00;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+            <div style="
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 1029px;
+            top: 591px;
+            
+            background: #D90AFB;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+            <div style="position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 1100px;
+            top: 591px;
+            
+            background: #575656;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"></div>
+
+
+    </div>
+    <input id="selected" type="text" style="display: none;" value="0">
+    </div>
+    <script>
+        
+        function addOpen(){
+            document.getElementById('add_item').style.display = 'block'
+        }
+        function addClose(){
+            document.getElementById('add_item').style.display = 'none'
+        }
+        function pickpussher(number){
+            document.getElementById('selected').value = number
+            console.log(document.getElementById('selected').value)
+
+        }
+    </script>
+</body>
+
+</html>

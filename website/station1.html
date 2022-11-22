@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Smart Factory</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar row">
+        <div>
+            <img src="img/Robot Studio-Logo-06.png" height="90px" alt="">
+        </div>
+        <div>
+            SMART FACTORY
+        </div>
+    </div>
+    <div class="row">
+        <div class="menu">
+
+            <div>
+                <p>PRODUCT</p>
+            </div>
+            <div>
+                <p>ORDER</p>
+            </div>
+            <div>
+                <p>STATION</p>
+            </div>
+            <div>
+                <p>ABOUT</p>
+            </div>
+
+        </div>
+        <div class="content">
+            <div>
+                <img style="margin: 50px;" src="img/machine management.png" alt="">
+            </div>
+            <div class="listItem" id="listItem">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <input class="Cnumber" style="left: 1064px;" type="text" id="rNumber" value="0" disabled>
+                <input class="Cnumber" style="left: 1194px;" type="text" id="bNumber" value="0" disabled>
+                <input class="Cnumber" style="left: 1323px;" type="text" id="gNumber" value="0" disabled>
+                <input class="Cnumber" style="left: 1446px;" type="text" id="yNumber" value="0" disabled>
+                <input class="Cnumber" style="left: 1577px;" type="text" id="pNumber" value="0" disabled>
+                <button style="left: 1695px;" onclick=addOpen()>Add</button>
+                <button style="left: 1795px;" onclick="addReset()">reset</button>
+            </div>
+            <div id="stationBody">
+                <div class="station"></div>
+                <div class="belt"></div>
+                <div class="colorsensor">Color Sensor</div>
+                <div id="colorShow" class="colorShow"></div>
+            </div>
+            <div class="pusherMain" id="pusher">
+                <div class="pus" id="phu1">
+                    <div class="pusher" id="phus1" onclick=pickpussher(1)>
+                        <div class="pusherText">Pusher1</div>
+                        <div class="pusherSte" id="phuSte1"></div>
+                    </div>
+                </div>
+                <div class="pus" id="phu3">
+                    <div class="pusher" id="phus3" onclick=pickpussher(3)>
+                        <div class="pusherText">Pusher3</div>
+                        <div class="pusherSte" id="phuSte3"></div>
+                    </div>
+                </div>
+                <div class="pus" id="phu5">
+                    <div class="pusher" id="phus5" onclick=pickpussher(5)>
+                        <div class="pusherText">Pusher5</div>
+                        <div class="pusherSte" id="phuSte5"></div>
+                    </div>
+                </div>
+                <div class="pus" id="phu7">
+                    <div class="pusher" id="phus7" onclick=pickpussher(7)>
+                        <div class="pusherText">Pusher7</div>
+                        <div class="pusherSte" id="phuSte7"></div>
+                    </div>
+                </div>
+                <div class="pus" id="phu9">
+                    <div class="pusher" id="phus9" onclick=pickpussher(9)>
+                        <div class="pusherText">Pusher9</div>
+                        <div class="pusherSte" id="phuSte9"></div>
+                    </div>
+                </div>
+                <div class="pus" id="phu0">
+                    <div class="pusher" id="phus0" onclick=pickpussher(0)>
+                        <div class="pusherTextBot">Pusher0</div>
+                        <div class="pusherSteBot" id="phuSte0"></div>
+                    </div>
+                </div>
+                <div class="pus" id="phu2">
+                    <div class="pusher" id="phus2" onclick=pickpussher(2)>
+                        <div class="pusherTextBot">Pusher2</div>
+                        <div class="pusherSteBot" id="phuSte2"></div>
+                    </div>
+                </div>
+                <div class="pus" id="phu4">
+                    <div class="pusher" id="phus4" onclick=pickpussher(4)>
+                        <div class="pusherTextBot">Pusher4</div>
+                        <div class="pusherSteBot" id="phuSte4"></div>
+                    </div>
+                </div>
+                <div class="pus" id="phu6">
+                    <div class="pusher" id="phus6" onclick=pickpussher(6)>
+                        <div class="pusherTextBot">Pusher6</div>
+                        <div class="pusherSteBot" id="phuSte6"></div>
+                    </div>
+                </div>
+                <div class="pus" id="phu8">
+                    <div class="pusher" id="phus8" onclick=pickpussher(8)>
+                        <div class="pusherTextBot">Pusher8</div>
+                        <div class="pusherSteBot" id="phuSte8"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="addItem" style="display: none;" id="addItem">
+                <div class="addBody">
+                </div>
+                <div class="addbodytext">Add Item</div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <input type="text" class="inputNum" id="numR">
+                <input type="text" class="inputNum" id="numB">
+                <input type="text" class="inputNum" id="numG">
+                <input type="text" class="inputNum" id="numY">
+                <input type="text" class="inputNum" id="numP">
+                <button onclick=addClose(1)>Add</button>
+                <button onclick=addClose(0)>Cancel</button>
+            </div>
+
+        </div>
+        <div id="pickcolor" style="display: none;" class="PColor">
+            <div class="pickcolor"></div>
+            <div class="pickcolorText">Change Color</div>
+            <input class="pickcolorInp" id="pickcolorInp" disabled type="text" value="">
+            <div onclick="colorClose('r')" class="box"></div>
+            <div onclick="colorClose('b')" class="box"></div>
+            <div onclick="colorClose('g')" class="box"></div>
+            <div onclick="colorClose('y')" class="box"></div>
+            <div onclick="colorClose('p')" class="box"></div>
+            <div onclick="colorClose('n')" class="box"></div>
+        </div>
+        <button class="setReset" onclick="setReset()">reset</button>
+        <input type="text" id="selected" value="0" style="display: none;">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+
+    <script>
+       
+        // $(document).ready(function () {
+        //     $.getJSON('http://127.0.0.1:8000/color/', function (data) {
+        //     // JSON result in `data` variable
+        //     console.log(data)
+        //     if (data.value == 'RED') {
+        //         document.getElementById('colorShow').style.background = '#FF0000';
+        //     }
+        //     if (data.value == 'BLUE') {
+        //         document.getElementById('colorShow').style.background = '#04B4FF';
+        //     }
+        //     if (data.value == 'GREEN') {
+        //         document.getElementById('colorShow').style.background = '#04FF2C';
+        //     }
+        //     if (data.value == 'YELLOW') {
+        //         document.getElementById('colorShow').style.background = '#F2DA00';
+        //     }
+        //     if (data.value == 'PURPLE') {
+        //         document.getElementById('colorShow').style.background = '#D90AFB';
+        //     }
+        // });
+        // },1000);
+
+
+        client = new Paho.MQTT.Client('test.mosquitto.org', Number(8080), "clientId");
+
+        client.onConnectionLost = onConnectionLost;
+        client.onMessageArrived = onMessageArrived;
+
+        client.connect({ onSuccess: onConnect });
+
+
+        function onConnect() {
+            console.log("onConnect");
+            client.subscribe("MQTT/SMFRE");
+        }
+
+        //ส่งข้อความ
+        function sendMessage(topic, text) {
+            message = new Paho.MQTT.Message(text);
+            message.destinationName = topic;
+            client.send(message);
+        }
+
+        // เชื่อมต่อไม่สำเร็จ
+        function onConnectionLost(responseObject) {
+            if (responseObject.errorCode !== 0) {
+                console.log("onConnectionLost:" + responseObject.errorMessage);
+            }
+        }
+        // รับข้อความ
+        function onMessageArrived(message) {
+            console.log(message.payloadString);
+        }
+        function addSet() {
+            document.getElementById('phus0').style.background = '#3A55E2';
+            document.getElementById('phus1').style.background = '#FF0000';
+            document.getElementById('phus2').style.background = '#04B4FF';
+            document.getElementById('phus3').style.background = '#04FF2C';
+            document.getElementById('phus4').style.background = '#F2DA00';
+            document.getElementById('phus5').style.background = '#D90AFB';
+            document.getElementById('phus6').style.background = '#3A55E2';
+            document.getElementById('phus7').style.background = '#3A55E2';
+            document.getElementById('phus8').style.background = '#3A55E2';
+            document.getElementById('phus9').style.background = '#3A55E2';
+            alert('Mode : Order')
+        }
+        function addOpen() {
+            document.getElementById('addItem').style.display = 'block'
+        }
+        function addReset() {
+            addSet()
+
+            sendMessage('MQTT/SMF', 'add,reset')
+        }
+        function addClose(num) {
+            if (num == 1) {
+                addSet()
+                sendMessage('MQTT/SMF', 'add,' + document.getElementById('numR').value + ','
+                    + document.getElementById('numB').value + ','
+                    + document.getElementById('numG').value + ','
+                    + document.getElementById('numY').value + ','
+                    + document.getElementById('numP').value)
+            }
+            document.getElementById('addItem').style.display = 'none'
+        }
+        function setReset() {
+            document.getElementById('phus0').style.background = '#3A55E2';
+            document.getElementById('phus1').style.background = '#3A55E2';
+            document.getElementById('phus2').style.background = '#3A55E2';
+            document.getElementById('phus3').style.background = '#3A55E2';
+            document.getElementById('phus4').style.background = '#3A55E2';
+            document.getElementById('phus5').style.background = '#3A55E2';
+            document.getElementById('phus6').style.background = '#3A55E2';
+            document.getElementById('phus7').style.background = '#3A55E2';
+            document.getElementById('phus8').style.background = '#3A55E2';
+            document.getElementById('phus9').style.background = '#3A55E2';
+            alert('Mode : Set')
+            sendMessage('MQTT/SMF', 'set,reset')
+        }
+        function pickpussher(number) {
+            document.getElementById('pickcolor').style.display = 'block'
+            document.getElementById('selected').value = number
+            document.getElementById('pickcolorInp').value = 'Pusher ' + number
+        }
+        function colorClose(color) {
+            if (color == 'r') {
+                if (document.getElementById('phus0').style.background =='rgb(255, 0, 0)') {
+                    document.getElementById('phus0').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus1').style.background =='rgb(255, 0, 0)') {
+                    document.getElementById('phus1').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus2').style.background =='rgb(255, 0, 0)') {
+                    document.getElementById('phus2').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus3').style.background =='rgb(255, 0, 0)') {
+                    document.getElementById('phus3').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus4').style.background =='rgb(255, 0, 0)') {
+                    document.getElementById('phus4').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus5').style.background =='rgb(255, 0, 0)') {
+                    document.getElementById('phus5').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus6').style.background =='rgb(255, 0, 0)') {
+                    document.getElementById('phus6').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus7').style.background =='rgb(255, 0, 0)') {
+                    document.getElementById('phus7').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus8').style.background =='rgb(255, 0, 0)') {
+                    document.getElementById('phus8').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus9').style.background =='rgb(255, 0, 0)') {
+                    document.getElementById('phus9').style.background = '#3A55E2';
+                }
+                document.getElementById('phus' + document.getElementById('selected').value).style.background = '#FF0000';
+                sendMessage('MQTT/SMF', 'set,' + color + ',' + document.getElementById('selected').value)
+
+            }
+            else if (color == 'b') {
+                if (document.getElementById('phus0').style.background =='rgb(4, 180, 255)') {
+                    document.getElementById('phus0').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus1').style.background =='rgb(4, 180, 255)') {
+                    document.getElementById('phus1').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus2').style.background =='rgb(4, 180, 255)') {
+                    document.getElementById('phus2').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus3').style.background =='rgb(4, 180, 255)') {
+                    document.getElementById('phus3').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus4').style.background =='rgb(4, 180, 255)') {
+                    document.getElementById('phus4').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus5').style.background =='rgb(4, 180, 255)') {
+                    document.getElementById('phus5').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus6').style.background =='rgb(4, 180, 255)') {
+                    document.getElementById('phus6').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus7').style.background =='rgb(4, 180, 255)') {
+                    document.getElementById('phus7').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus8').style.background =='rgb(4, 180, 255)') {
+                    document.getElementById('phus8').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus9').style.background =='rgb(4, 180, 255)') {
+                    document.getElementById('phus9').style.background = '#3A55E2';
+                }
+                document.getElementById('phus' + document.getElementById('selected').value).style.background = '#04B4FF';
+                sendMessage('MQTT/SMF', 'set,' + color + ',' + document.getElementById('selected').value)
+            }
+            else if (color == 'g') {
+                if (document.getElementById('phus0').style.background =='rgb(4, 255, 44)') {
+                    document.getElementById('phus0').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus1').style.background =='rgb(4, 255, 44)') {
+                    document.getElementById('phus1').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus2').style.background =='rgb(4, 255, 44)') {
+                    document.getElementById('phus2').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus3').style.background =='rgb(4, 255, 44)') {
+                    document.getElementById('phus3').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus4').style.background =='rgb(4, 255, 44)') {
+                    document.getElementById('phus4').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus5').style.background =='rgb(4, 255, 44)') {
+                    document.getElementById('phus5').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus6').style.background =='rgb(4, 255, 44)') {
+                    document.getElementById('phus6').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus7').style.background =='rgb(4, 255, 44)') {
+                    document.getElementById('phus7').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus8').style.background =='rgb(4, 255, 44)') {
+                    document.getElementById('phus8').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus9').style.background =='rgb(4, 255, 44)') {
+                    document.getElementById('phus9').style.background = '#3A55E2';
+                }
+                document.getElementById('phus' + document.getElementById('selected').value).style.background = '#04FF2C';
+                sendMessage('MQTT/SMF', 'set,' + color + ',' + document.getElementById('selected').value)
+            }
+            else if (color == 'y') {
+                if (document.getElementById('phus0').style.background =='rgb(242, 218, 0)') {
+                    document.getElementById('phus0').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus1').style.background =='rgb(242, 218, 0)') {
+                    document.getElementById('phus1').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus2').style.background =='rgb(242, 218, 0)') {
+                    document.getElementById('phus2').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus3').style.background =='rgb(242, 218, 0)') {
+                    document.getElementById('phus3').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus4').style.background =='rgb(242, 218, 0)') {
+                    document.getElementById('phus4').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus5').style.background =='rgb(242, 218, 0)') {
+                    document.getElementById('phus5').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus6').style.background =='rgb(242, 218, 0)') {
+                    document.getElementById('phus6').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus7').style.background =='rgb(242, 218, 0)') {
+                    document.getElementById('phus7').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus8').style.background =='rgb(242, 218, 0)') {
+                    document.getElementById('phus8').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus9').style.background =='rgb(242, 218, 0)') {
+                    document.getElementById('phus9').style.background = '#3A55E2';
+                }
+                document.getElementById('phus' + document.getElementById('selected').value).style.background = '#F2DA00';
+                sendMessage('MQTT/SMF', 'set,' + color + ',' + document.getElementById('selected').value)
+            }
+            else if (color == 'p') {
+                if (document.getElementById('phus0').style.background =='rgb(217, 10, 251)') {
+                    document.getElementById('phus0').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus1').style.background =='rgb(217, 10, 251)') {
+                    document.getElementById('phus1').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus2').style.background =='rgb(217, 10, 251)') {
+                    document.getElementById('phus2').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus3').style.background =='rgb(217, 10, 251)') {
+                    document.getElementById('phus3').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus4').style.background =='rgb(217, 10, 251)') {
+                    document.getElementById('phus4').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus5').style.background =='rgb(217, 10, 251)') {
+                    document.getElementById('phus5').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus6').style.background =='rgb(217, 10, 251)') {
+                    document.getElementById('phus6').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus7').style.background =='rgb(217, 10, 251)') {
+                    document.getElementById('phus7').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus8').style.background =='rgb(217, 10, 251)') {
+                    document.getElementById('phus8').style.background = '#3A55E2';
+                }
+                if (document.getElementById('phus9').style.background =='rgb(217, 10, 251)') {
+                    document.getElementById('phus9').style.background = '#3A55E2';
+                }
+                document.getElementById('phus' + document.getElementById('selected').value).style.background = '#D90AFB';
+                sendMessage('MQTT/SMF', 'set,' + color + ',' + document.getElementById('selected').value)
+            }
+            else if (color == 'n') {
+                var tempC = ''
+                // alert(document.getElementById('phus' + document.getElementById('selected').value).style.background)
+                if (document.getElementById('phus' + document.getElementById('selected').value).style.background == 'rgb(255, 0, 0)') {
+                    var tempC = 'r'
+                }
+                if (document.getElementById('phus' + document.getElementById('selected').value).style.background == 'rgb(4, 180, 255)') {
+                    var tempC = 'b'
+                }
+                if (document.getElementById('phus' + document.getElementById('selected').value).style.background == 'rgb(4, 255, 44)') {
+                    var tempC = 'g'
+                }
+                if (document.getElementById('phus' + document.getElementById('selected').value).style.background == 'rgb(242, 218, 0)') {
+                    var tempC = 'y'
+                }
+                if (document.getElementById('phus' + document.getElementById('selected').value).style.background == 'rgb(217, 10, 251)') {
+                    var tempC = 'p'
+                }
+                // alert(tempC)
+                document.getElementById('phus' + document.getElementById('selected').value).style.background = '#3A55E2';
+                sendMessage('MQTT/SMF', 'set,' + tempC + ',none')
+
+            }
+            console.log(color, document.getElementById('selected').value)
+            document.getElementById('pickcolor').style.display = 'none';
+        }
+        $('document').ready(function () {
+        setInterval(function () {getRealData(),getRealData2()}, 100);//request every x seconds
+
+        }); 
+
+        function getRealData() {
+            $.ajax({
+                url: "http://localhost/tss/0/sensor/10",
+                type: "GET",
+                success: function (data) {
+                    /// some code to get result
+                    if (data.value == 'RED') {
+                        document.getElementById('colorShow').style.background = '#FF0000';
+                    }
+                    if (data.value == 'BLUE') {
+                        document.getElementById('colorShow').style.background = '#04B4FF';
+                    }
+                    if (data.value == 'GREEN') {
+                        document.getElementById('colorShow').style.background = '#04FF2C';
+                    }
+                    if (data.value == 'YELLOW') {
+                        document.getElementById('colorShow').style.background = '#F2DA00';
+                    }
+                    if (data.value == 'PURPLE') {
+                        document.getElementById('colorShow').style.background = '#D90AFB';
+                    }
+                }
+            })
+        }
+        function getRealData2() {
+            $.ajax({
+                url: "http://localhost/tss/0/sensor",
+                type: "GET",
+                success: function (data) {
+                    /// some code to get result
+                    if(data[0].value =='1'){
+                        document.getElementById('phuSte0').style.background = '#FF0000';
+                    }
+                    else{
+                        document.getElementById('phuSte0').style.background = '#585858';
+                    }
+                    if(data[1].value =='1'){
+                        document.getElementById('phuSte1').style.background = '#FF0000';
+                    }
+                    else{
+                        document.getElementById('phuSte1').style.background = '#585858';
+                    }
+                    if(data[2].value =='1'){
+                        document.getElementById('phuSte2').style.background = '#FF0000';
+                    }
+                    else{
+                        document.getElementById('phuSte2').style.background = '#585858';
+                    }
+                    if(data[3].value =='1'){
+                        document.getElementById('phuSte3').style.background = '#FF0000';
+                    }
+                    else{
+                        document.getElementById('phuSte3').style.background = '#585858';
+                    }
+                    if(data[4].value =='1'){
+                        document.getElementById('phuSte4').style.background = '#FF0000';
+                    }
+                    else{
+                        document.getElementById('phuSte4').style.background = '#585858';
+                    }
+                    if(data[5].value =='1'){
+                        document.getElementById('phuSte5').style.background = '#FF0000';
+                    }
+                    else{
+                        document.getElementById('phuSte5').style.background = '#585858';
+                    }
+                    if(data[6].value =='1'){
+                        document.getElementById('phuSte6').style.background = '#FF0000';
+                    }
+                    else{
+                        document.getElementById('phuSte6').style.background = '#585858';
+                    }
+                    if(data[7].value =='1'){
+                        document.getElementById('phuSte7').style.background = '#FF0000';
+                    }
+                    else{
+                        document.getElementById('phuSte7').style.background = '#585858';
+                    }
+                    if(data[8].value =='1'){
+                        document.getElementById('phuSte8').style.background = '#FF0000';
+                    }
+                    else{
+                        document.getElementById('phuSte8').style.background = '#585858';
+                    }
+                    if(data[9].value =='1'){
+                        document.getElementById('phuSte9').style.background = '#FF0000';
+                    }
+                    else{
+                        document.getElementById('phuSte9').style.background = '#585858';
+                    }
+
+                }
+            })
+        }
+
+    </script>
+</body>
+
+</html>
